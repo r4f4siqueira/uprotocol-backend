@@ -1,73 +1,124 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# 🌍 UPROTOCOL-BACKEND
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Sumário
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- [Dependencias](#dependências)
+- [Instalação](#instalação)
+- [Descrição](#descrição)
+- [Mais Informações](#mais-inoformações)
+  - [Nest-CLI](#nest-cli)
+    - [Como Usar](#como-usar)
+    - [Exemplo](#exemplo)
+  - [Extensões (VS Code)](#extensões-vs-code)
+    - [Recomendadas](#recomendadas)
+    - [Outras Extensões](#outras-extensões)
 
-## Description
+## Dependências
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+| Name    | Version | Doc                                 |
+| ------- | ------- | ----------------------------------- |
+| Nest.js | 10      | https://docs.nestjs.com/            |
+| Node.js | 20.11.0 | https://nodejs.org/docs/latest/api/ |
 
-## Installation
+## Instalação
+
+**_Passo 1_** : Após clonar o repositório crie uma cópia do arquivo `.env-exemple`, renomeie para `.env` e preencha as variaveis de ambiente do arquivo `.env`;
+
+**_Passo 2_** : execute o comando para instalar as dependências do projeto:
 
 ```bash
-$ npm install
+npm install
 ```
 
-## Running the app
+**_Passo 3_** : Execute o comando para iniciar o projeto:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm run start:dev
 ```
 
-## Test
+> [!NOTE]
+> Desta forma irá executar a aplicação em status de desenvolvimento, fazendo com que a cada alteração realizada nos arquivos o servidor reinicie automaticamente;
+
+## Descrição
+
+[...]
+
+## Mais Inoformações
+
+[...]
+
+### Nest-CLI
+
+Primeiro verifique se o CLI do Nest ja está instalado através do comando:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+nest --help
 ```
 
-## Support
+Caso não aparecer a pagina de ajuda do Nest execute o comando de instalação:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+npm install -g @nestjs/cli
+```
 
-## Stay in touch
+#### Como Usar
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Atualmente estamos utilizando apenas o comando:
 
-## License
+```bash
+nest g res nome-do-model caminho-do-model --no-spec
+```
 
-Nest is [MIT licensed](LICENSE).
+Ou seja, no momento de criar um novo módulo excutamos o comando e desta forma os arquivos nescessários para operação de crud junto com a configuração da rota ja é criado e ajustado;
+
+#### Exemplo
+
+```bash
+nest g res exemplo models --no-spec
+```
+
+Após executar o comando acima será feita duas perguntas:
+
+```bash
+? What transport layer do you use?
+? Would you like to generate CRUD entry points?
+```
+
+Selecione Rest API na primeira pergunta e digite Y para a segunda pergunta;
+
+Desta forma a CLI cria os arquivos nescessários para serem usados como uma API como por exemplho o controller e os dtos.
+
+Arquivos gerados pelo comando:
+
+```bash
+CREATE src/models/exemplo/exemplo.module.ts (292 bytes)
+CREATE src/models/exemplo/exemplo.service.ts (717 bytes)
+CREATE src/models/exemplo/dto/create-exemplo.dto.ts (37 bytes)
+CREATE src/models/exemplo/dto/update-exemplo.dto.ts (192 bytes)
+CREATE src/models/exemplo/entities/exemplo.entity.ts (28 bytes)
+UPDATE src/app.module.ts (1329 bytes)
+```
+
+> [!NOTE]
+> Note que o ultimo arquivo esta com a descrição `UPDATE` ou seja o arquivo foi atualizado inserindo o novo módulo para que seja possivel ser utilizado.
+
+### Extensões (VS Code)
+
+#### Recomendadas
+
+| Extenção                  | Motivo                                                                                                                                                                                                                   | Doc                                                                                |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| Prettier - Code formatter | Temos um arquivo na raiz do projeto que define algumas regras referente a padronização da formatão do projeto, com esta extenção instalada pode configurar o VS code para formatar automaticamente no padrão do projeto; | https://prettier.io/docs/en/                                                       |
+| ESLint                    | Usado para mostrar erros seja de lógica, tipagem ou formatação                                                                                                                                                           | https://eslint.org/docs/latest/                                                    |
+| Comment Anchors           | Todos os comentários usado no projeto deve estar definido com uma tag antes como por exemplo: `//OBS - ...`, `//TEMPORARIO - ...`, `//PENDENTE - ...`, `//REVIEW - ...`.                                                 | https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors |
+
+#### Outras Extensões
+
+Extensões que pode ajudar no dia dia ou no projeto:
+Extenção|Motivo|Doc
+--------|------|---
+Error Lens|Mostra uma descrição mais detalhada de um erro ou warn na linha onde está localizado o problema;|https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens
+GitLens — Git supercharged|Com essa extenção você pode fazer todo controle do repositório do projeto sem precisar executar muitos comandos git(na verdade ele executa mas vc só aperta um botão).Não precisa pagar para usar as facilidades ao menos que vc queira pagar para ver coisas coloridas| https://www.gitkraken.com/gitlens
+Git Graph| Ajuda a ver o fluxo de trabalho e ver como está o trabalho nas outras `branchs` | https://github.com/mhutchie/vscode-git-graph
+Project Manager| Você pode abrir outro repositório sem precisar sair do VS Code, separar os repositórios por tag ex: No meu VS Code este repositório esta na tag UPROTOCOL junto com o repositório do frontend, assim mais fácil de encontrar o projeto;| https://github.com/alefragnani/vscode-project-manager
+Gitmoji| Usado para commitar o código com um emoji 😅|https://github.com/seatonjiang/gitmoji-vscode
