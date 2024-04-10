@@ -22,7 +22,7 @@
 
 ## Instalação
 
-**_Passo 1_** : Após clonar o repositório crie uma cópia do arquivo `.env-exemple`, renomeie para `.env` e preencha as variaveis de ambiente do arquivo `.env`;
+**_Passo 1_** : Após clonar o repositório crie uma cópia do arquivo `.env.exemple`, renomeie para `.env` e preencha as variaveis de ambiente do arquivo `.env`;
 
 **_Passo 2_** : execute o comando para instalar as dependências do projeto:
 
