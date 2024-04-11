@@ -124,5 +124,3 @@ GitLens — Git supercharged|Com essa extenção você pode fazer todo controle 
 Git Graph| Ajuda a ver o fluxo de trabalho e ver como está o trabalho nas outras `branchs` | https://github.com/mhutchie/vscode-git-graph
 Project Manager| Você pode abrir outro repositório sem precisar sair do VS Code, separar os repositórios por tag ex: No meu VS Code este repositório esta na tag UPROTOCOL junto com o repositório do frontend, assim mais fácil de encontrar o projeto;| https://github.com/alefragnani/vscode-project-manager
 Gitmoji| Usado para commitar o código com um emoji 😅|https://github.com/seatonjiang/gitmoji-vscode
-
-test protection branch
