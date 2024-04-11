@@ -15,14 +15,16 @@
 
 ## Dependências
 
-| Name    | Version | Doc                                 |
-| ------- | ------- | ----------------------------------- |
-| Nest.js | 10      | https://docs.nestjs.com/            |
-| Node.js | 20.11.0 | https://nodejs.org/docs/latest/api/ |
+| Name       | Version | Doc                                 |
+| ---------- | ------- | ----------------------------------- |
+| Nest.js    | 10      | https://docs.nestjs.com/            |
+| Node.js    | 20.11.0 | https://nodejs.org/docs/latest/api/ |
+| Prisma     | 5.12.1  | https://www.prisma.io/docs/         |
+| PostgreSQL | ^14.4.1 | https://www.postgresql.org/docs/    |
 
 ## Instalação
 
-**_Passo 1_** : Após clonar o repositório crie uma cópia do arquivo `.env-exemple`, renomeie para `.env` e preencha as variaveis de ambiente do arquivo `.env`;
+**_Passo 1_** : Após clonar o repositório crie uma cópia do arquivo `.env.exemple`, renomeie para `.env` e preencha as variaveis de ambiente do arquivo `.env`;
 
 **_Passo 2_** : execute o comando para instalar as dependências do projeto:
 
